@@ -1,0 +1,4 @@
+#<IfModule mod_rewrite.c>
+#RewriteEngine on
+#RewriteRule ^(.*)$ http://localhost/udemy/symfony-api-react/public/$1 [L,NE,R=301]
+#</IfModule>
