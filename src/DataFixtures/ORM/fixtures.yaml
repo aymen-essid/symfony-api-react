@@ -1,0 +1,7 @@
+App\Entity\BlogPost:
+  BlogPost_{1..20}:
+    title: <name()>
+    content: <text(20)>
+    published: <date_create()>
+    author: <name()>
+    slug: <name()>

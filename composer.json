@@ -10,6 +10,7 @@
         "doctrine/doctrine-bundle": "^2.2",
         "doctrine/doctrine-migrations-bundle": "^3.0",
         "doctrine/orm": "^2.8",
+        "easycorp/easyadmin-bundle": "^3.2",
         "phpdocumentor/reflection-docblock": "^5.2",
         "sensio/framework-extra-bundle": "^6.0",
         "symfony/apache-pack": "^1.0",
@@ -73,6 +74,9 @@
         }
     },
     "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.4",
+        "hautelook/alice-bundle": "^2.8",
+        "nelmio/alice": "^3.8",
         "symfony/maker-bundle": "^1.29",
         "symfony/var-dumper": "4.4.*"
     }

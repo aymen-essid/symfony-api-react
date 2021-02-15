@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\BlogPost;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -26,8 +28,6 @@ class BlogController extends AbstractController
         $repository = $this->getDoctrine()->getRepository(BlogPost::class);
         $items = $repository->findAll();
 
-//        dump($items); exit;
-
         return $this->json(
             [
                 'page' => $page,
@@ -42,22 +42,21 @@ class BlogController extends AbstractController
 
     /**
      * @Route("/post/{id}", name="_post_by_id", methods={"GET"}, requirements={"id"="\d+"})
+     * @ParamConverter("post", class="App:BlogPost")
      */
-    public function post($id): Response
+    public function post($post): Response
     {
-        return $this->json(
-            $this->getDoctrine()->getRepository(BlogPost::class)->find($id)
-        );
+        // using param converter
+        return $this->json($post);
     }
 
     /**
      * @Route("/post/{slug}", name="_by_slug", methods={"GET"})
      */
-    public function postBySlug($slug): Response
+    public function postBySlug(BlogPost $post): Response
     {
-        return $this->json(
-            $this->getDoctrine()->getRepository(BlogPost::class)->findBy(['slug' => $slug])
-        );
+        // same as findBy (uses the param in route as column to search in the sepcified entity)
+        return $this->json($post);
     }
 
     /**
@@ -74,5 +73,16 @@ class BlogController extends AbstractController
         $em->flush();
 
         return $this->json($blogPost);
+    }
+
+    /**
+     * @Route("/post/{id}", name="_delete", methods={"DELETE"})
+     */
+    public function delete(BlogPost $post){
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($post);
+        $em->flush();
+
+        return new JsonResponse(null, Response::HTTP_NO_CONTENT);
     }
 }
