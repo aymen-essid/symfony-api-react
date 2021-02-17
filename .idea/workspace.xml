@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eeabb38d-6d82-4fb7-91b1-f32caf23f908" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/routes/api_platform.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/routes/api_platform_admin.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/symfony-api-react.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony-api-react.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/BlogPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/BlogPost.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,6 +129,14 @@
       <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
       <path value="$PROJECT_DIR$/vendor/symfony/asset" />
       <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/negotiation" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/core" />
+      <path value="$PROJECT_DIR$/vendor/nelmio/cors-bundle" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
     </include_path>
   </component>
   <component name="ProjectId" id="1oLExAwNWvsevV9ZijB8SXcLb50" />
@@ -181,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613466548339</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="use api-platform + easyAdmin3">
+      <created>1613568741458</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1613568741458</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,25 +207,26 @@
     <MESSAGE value="Blog Entity / controller + .htaccess" />
     <MESSAGE value="Blog Entity / controller + migrations + .htaccess" />
     <MESSAGE value="init before using api-platform" />
-    <option name="LAST_COMMIT_MESSAGE" value="init before using api-platform" />
+    <MESSAGE value="use api-platform + easyAdmin3" />
+    <option name="LAST_COMMIT_MESSAGE" value="use api-platform + easyAdmin3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="441" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613137654328">
+    <state x="441" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613498674670">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="441" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1613137654328" />
+    <state x="441" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1613498674670" />
     <state x="373" y="3" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613477931766">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="373" y="3" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1613477931766" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1613466547506">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1613568739844">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1613466547506" />
-    <state x="109" y="100" width="1166" height="528" key="DiffContextDialog" timestamp="1613470034914">
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1613568739844" />
+    <state x="109" y="100" width="1166" height="528" key="DiffContextDialog" timestamp="1613573170753">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="109" y="100" width="1166" height="528" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1613470034914" />
+    <state x="109" y="100" width="1166" height="528" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1613573170753" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1613066960667">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -247,14 +263,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="425" y="98" key="VcsDiffUtil.ChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1613465517435" />
-    <state x="169" y="33" width="1166" height="528" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1613497420390">
+    <state x="169" y="33" width="1166" height="528" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1613573170754">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="169" y="33" width="1166" height="528" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1613497420390" />
-    <state x="128" y="25" width="967" height="619" key="find.popup" timestamp="1613498534801">
+    <state x="169" y="33" width="1166" height="528" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1613573170754" />
+    <state x="109" y="100" width="1166" height="528" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1613573170754">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="128" y="25" width="967" height="619" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1613498534801" />
+    <state x="109" y="100" width="1166" height="528" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1613573170754" />
+    <state x="128" y="25" width="967" height="619" key="find.popup" timestamp="1613571852165">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="128" y="25" width="967" height="619" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1613571852165" />
     <state x="456" y="265" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1613393328204">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
