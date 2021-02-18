@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eeabb38d-6d82-4fb7-91b1-f32caf23f908" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/routes/api_platform.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/api_platform_admin.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/dev/nelmio_alice.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/ORM/fixturesUser.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Comment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/symfony-api-react.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony-api-react.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/dev/hautelook_alice.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/test/hautelook_alice.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/ORM/fixtures.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/ORM/fixturesBlog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/BlogPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/BlogPost.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,8 +117,6 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
       <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
       <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
-      <path value="$PROJECT_DIR$/vendor/theofidry/alice-data-fixtures" />
-      <path value="$PROJECT_DIR$/vendor/hautelook/alice-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/vendor/symfony/uid" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
@@ -147,20 +153,24 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/config/routes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/DataFixtures" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\udemy\symfony-api-react\src\DataFixtures" />
+      <recent name="C:\xampp\htdocs\udemy\symfony-api-react\src\DataFixtures\ORM" />
       <recent name="C:\xampp\htdocs\udemy\symfony-api-react\config\routes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\udemy\symfony-api-react\src\DataFixtures\Providers" />
+      <recent name="C:\xampp\htdocs\udemy\symfony-api-react\src\DataFixtures" />
       <recent name="C:\xampp\htdocs\udemy\symfony-api-react\src\Controller" />
       <recent name="C:\xampp\htdocs\udemy\symfony-api-react\src" />
       <recent name="C:\xampp\htdocs\udemy\symfony-api-react\fixtures" />
-      <recent name="C:\xampp\htdocs\udemy\symfony-api-react\src\DataFixtures" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -196,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613568741458</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Working API + ADMIN + APP">
+      <created>1613574236223</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613574236223</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,21 +225,34 @@
     <MESSAGE value="Blog Entity / controller + migrations + .htaccess" />
     <MESSAGE value="init before using api-platform" />
     <MESSAGE value="use api-platform + easyAdmin3" />
-    <option name="LAST_COMMIT_MESSAGE" value="use api-platform + easyAdmin3" />
+    <MESSAGE value="Working API + ADMIN + APP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working API + ADMIN + APP" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="441" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613498674670">
+    <state x="443" y="188" key="#Notifications" timestamp="1613584408363">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="441" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1613498674670" />
-    <state x="373" y="3" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613477931766">
+    <state x="443" y="188" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1613584408363" />
+    <state x="441" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613588932734">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="373" y="3" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1613477931766" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1613568739844">
+    <state x="441" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1613588932734" />
+    <state x="497" y="46" key="#com.intellij.ide.util.MemberChooser" timestamp="1613587942651">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1613568739844" />
+    <state x="497" y="46" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1613587942651" />
+    <state x="373" y="3" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613588977815">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="373" y="3" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1613588977815" />
+    <state x="422" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613594829448">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="422" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1613594829448" />
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1613574235424">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1613574235424" />
     <state x="109" y="100" width="1166" height="528" key="DiffContextDialog" timestamp="1613573170753">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -231,30 +261,42 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1613066960667" />
-    <state width="1306" height="176" key="GridCell.Tab.0.bottom" timestamp="1613496217154">
+    <state width="1306" height="176" key="GridCell.Tab.0.bottom" timestamp="1613574781625">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="176" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1613496217154" />
-    <state width="1306" height="176" key="GridCell.Tab.0.center" timestamp="1613496217153">
+    <state width="1306" height="176" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1613574781625" />
+    <state width="1306" height="176" key="GridCell.Tab.0.center" timestamp="1613574781624">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="176" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1613496217153" />
-    <state width="1306" height="176" key="GridCell.Tab.0.left" timestamp="1613496217153">
+    <state width="1306" height="176" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1613574781624" />
+    <state width="1306" height="176" key="GridCell.Tab.0.left" timestamp="1613574781624">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="176" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1613496217153" />
-    <state width="1306" height="176" key="GridCell.Tab.0.right" timestamp="1613496217154">
+    <state width="1306" height="176" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1613574781624" />
+    <state width="1306" height="176" key="GridCell.Tab.0.right" timestamp="1613574781625">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="176" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1613496217154" />
+    <state width="1306" height="176" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1613574781625" />
+    <state x="272" y="99" key="IDE.errors.dialog" timestamp="1613589392511">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="272" y="99" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1613589392511" />
+    <state x="405" y="87" key="NewPhpClassDialog" timestamp="1613588872791">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="405" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1613588872791" />
+    <state x="526" y="287" key="NewPhpFileDialog" timestamp="1613596777007">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="526" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1613596777007" />
     <state x="485" y="66" key="RollbackChangesDialog" timestamp="1613468656841">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="485" y="66" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1613468656841" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1613070567883">
+    <state x="250" y="18" key="SettingsEditor" timestamp="1613584725110">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1613070567883" />
+    <state x="250" y="18" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1613584725110" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1613403410713">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -263,21 +305,29 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="425" y="98" key="VcsDiffUtil.ChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1613465517435" />
-    <state x="169" y="33" width="1166" height="528" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1613573170754">
+    <state x="217" y="231" width="1166" height="528" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1613588639914">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="169" y="33" width="1166" height="528" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1613573170754" />
+    <state x="217" y="231" width="1166" height="528" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1613588639914" />
     <state x="109" y="100" width="1166" height="528" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1613573170754">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="109" y="100" width="1166" height="528" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1613573170754" />
-    <state x="128" y="25" width="967" height="619" key="find.popup" timestamp="1613571852165">
+    <state x="128" y="25" width="967" height="619" key="find.popup" timestamp="1613641437250">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="128" y="25" width="967" height="619" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1613571852165" />
+    <state x="128" y="25" width="967" height="619" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1613641437250" />
     <state x="456" y="265" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1613393328204">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="456" y="265" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728@0.0.1366.728" timestamp="1613393328204" />
+    <state x="348" y="164" key="run.anything.popup" timestamp="1613599230863">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="348" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1613599230863" />
+    <state x="355" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1613595399531">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="355" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1613595399531" />
   </component>
 </project>

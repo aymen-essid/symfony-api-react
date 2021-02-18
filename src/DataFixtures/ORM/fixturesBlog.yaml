@@ -3,5 +3,5 @@ App\Entity\BlogPost:
     title: <name()>
     content: <text(20)>
     published: <date_create()>
-    author: <name()>
+    author: <integer()>
     slug: <name()>
